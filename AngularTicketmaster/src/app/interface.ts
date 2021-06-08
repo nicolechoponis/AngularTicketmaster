@@ -8,6 +8,7 @@ export interface Event {
     name:string;
     type:string;
     url:string;
+    images:Images[];
     dates:Dates; 
     priceRanges:PriceRanges[];
     seatmap:Seatmap;
@@ -15,6 +16,10 @@ export interface Event {
         venues:Venue[];
     }
 }
+export interface Images {
+    url:string;
+}
+
 export interface Dates {
     start:Start;
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { APIService } from '../api.service';
-import { EventResponse, Event, Dates, Start, PriceRanges, Seatmap, Venue } from '../interface';
+import { EventResponse, Event, Images, Dates, Start, PriceRanges, Seatmap, Venue } from '../interface';
 
 @Component({
   selector: 'app-event-list',
@@ -8,6 +8,9 @@ import { EventResponse, Event, Dates, Start, PriceRanges, Seatmap, Venue } from 
   styleUrls: ['./event-list.component.css']
 })
 export class EventListComponent implements OnInit {
+
+  searchTerm: string = '';
+
   event: Event [] = [];
   constructor(public api: APIService) { }
 

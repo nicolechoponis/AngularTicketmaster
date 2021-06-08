@@ -1,1 +1,9 @@
-<p>event-list works!</p>
+<input [(ngModel)]="searchTerm" placeholder="Search for event"/>
+<!-- <label class="hide">Filter</label> -->
+<div class="eventArea">
+    <div class="eventListings" *ngFor="let events of event; let i = index">
+        <p>{{events.name}}</p>
+        <a href={{events.url}}><h1>{{events.name}}</h1></a>
+        <img src={{events.images[4].url}}/>
+  </div>
+  </div>

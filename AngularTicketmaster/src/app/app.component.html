@@ -1,2 +1,8 @@
-<h2>{{title}}</h2>
-<app-event-list></app-event-list>
+<nav>
+    <ul>
+      <li><a routerLink='/event-list' routerLinkActive="active">Events</a></li>
+      <li><a routerLink='/bucketlist' routerLinkActive="active">Bucketlist</a></li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+<!-- <app-event-list></app-event-list> -->
