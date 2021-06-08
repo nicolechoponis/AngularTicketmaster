@@ -11,6 +11,8 @@ export class APIService {
   constructor(public client: HttpClient) {}
   
   getEvents(){
-    return this.client.get<EventResponse>(this.apiURL);
+    let pageURL=this.apiURL+"&page=1";
+    return this.client.get<EventResponse>(pageURL);
+    //this is where we will need to put in our 3 parameters (search, etc)
   }
 }
