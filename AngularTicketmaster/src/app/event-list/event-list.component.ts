@@ -10,6 +10,7 @@ import { EventResponse, Event, Images, Dates, Start, PriceRanges, Seatmap, Venue
 export class EventListComponent implements OnInit {
 
   searchTerm: string = '';
+  searchCity: string = '';
 
   event: Event [] = [];
   constructor(public api: APIService) { }
@@ -20,5 +21,12 @@ export class EventListComponent implements OnInit {
       //this.venue = data._embedded.venues;
       console.log(data._embedded);
     }) 
+   }
+   keywordSearch(): void {
+     this.api.searchEvents({keyword: this.searchTerm, city: this.searchCity}).subscribe((data)=>{
+      if (data){
+      this.event = data._embedded.events;
+        console.log(this.event);}
+     })
    }
 }
