@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { APIService } from '../api.service';
+import { EventResponse, Event, Dates, Start, PriceRanges, Seatmap, Venue } from '../interface';
 
 @Component({
   selector: 'app-event-list',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-list.component.css']
 })
 export class EventListComponent implements OnInit {
-
-  constructor() { }
+  event: Event [] = [];
+  constructor(public api: APIService) { }
 
   ngOnInit(): void {
-  }
-
+   this.api.getEvents().subscribe((data)=>{
+      this.event = data._embedded.events;
+      //this.venue = data._embedded.venues;
+      console.log(data._embedded);
+    }) 
+   }
 }

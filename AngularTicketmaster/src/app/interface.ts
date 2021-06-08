@@ -1,15 +1,19 @@
 
-export interface Event {
-    events:Events[];
-    venues:Venues[];
+export interface EventResponse {
+    _embedded: {
+        events:Event[];
+    }
 }
-export interface Events {
+export interface Event {
     name:string;
     type:string;
     url:string;
     dates:Dates; 
     priceRanges:PriceRanges[];
     seatmap:Seatmap;
+    _embedded: {
+        venues:Venue[];
+    }
 }
 export interface Dates {
     start:Start;
@@ -25,7 +29,7 @@ export interface PriceRanges {
 export interface Seatmap {
     staticUrl:string;
 }
-export interface Venues {
+export interface Venue {
     name:string;
     city: {
         name:string;
@@ -36,6 +40,8 @@ export interface Venues {
     }
     address: {
         line1:string;
+        line2:string;
+        line3:string;
     }
 }
 
