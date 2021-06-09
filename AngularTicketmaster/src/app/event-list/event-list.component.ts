@@ -24,9 +24,10 @@ export class EventListComponent implements OnInit {
    }
    keywordSearch(): void {
      this.api.searchEvents({keyword: this.searchTerm, city: this.searchCity}).subscribe((data)=>{
-      if (data){
+      if (data && data._embedded){
       this.event = data._embedded.events;
-        console.log(this.event);}
+        console.log(this.event);
+      }else{this.event = []}
      })
    }
 }
