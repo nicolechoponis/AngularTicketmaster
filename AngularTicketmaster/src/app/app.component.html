@@ -1,8 +1,10 @@
 <nav>
     <ul>
+      <li><a routerLink='/' routerLinkActive="active"><img class="logo" src="/assets/TicketMediocre-Logo.png"></a></li>
       <li><a routerLink='/event-list' routerLinkActive="active">Events</a></li>
       <li><a routerLink='/bucketlist' routerLinkActive="active">Bucketlist</a></li>
     </ul>
   </nav>
   <router-outlet></router-outlet>
-<!-- <app-event-list></app-event-list> -->
+  <app-search-criteria></app-search-criteria>
+  <app-event-list></app-event-list>

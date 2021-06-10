@@ -8,7 +8,6 @@ import { StarComponent } from './star/star.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
 import { FormsModule } from '@angular/forms';
-import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -16,8 +15,7 @@ import { SearchPipe } from './search.pipe';
     SearchCriteriaComponent,
     StarComponent,
     EventListComponent,
-    BucketlistPageComponent,
-    SearchPipe
+    BucketlistPageComponent
   ],
   imports: [
     BrowserModule,
