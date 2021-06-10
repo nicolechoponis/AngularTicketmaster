@@ -12,6 +12,7 @@ export interface Event {
     dates:Dates; 
     priceRanges:PriceRanges[];
     seatmap:Seatmap;
+    classifications:Classification[];
     _embedded: {
         venues:Venue[];
     }
@@ -33,6 +34,15 @@ export interface PriceRanges {
 }
 export interface Seatmap {
     staticUrl:string;
+}
+export interface Classification{
+    segment:{
+        name:string;
+        genre:Genre[];
+    }
+}
+export interface Genre{
+    name: string;
 }
 export interface Venue {
     name:string;

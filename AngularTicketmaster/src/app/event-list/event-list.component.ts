@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { APIService } from '../api.service';
-import { EventResponse, Event, Images, Dates, Start, PriceRanges, Seatmap, Venue } from '../interface';
+import { EventResponse, Event, Genre, Classification, Images, Dates, Start, PriceRanges, Seatmap, Venue } from '../interface';
 
 @Component({
   selector: 'app-event-list',
@@ -11,6 +11,7 @@ export class EventListComponent implements OnInit {
 
   searchTerm: string = '';
   searchCity: string = '';
+  searchType: string = '';
 
   event: Event [] = [];
   constructor(public api: APIService) { }
@@ -23,7 +24,7 @@ export class EventListComponent implements OnInit {
     }) 
    }
    keywordSearch(): void {
-     this.api.searchEvents({keyword: this.searchTerm, city: this.searchCity}).subscribe((data)=>{
+     this.api.searchEvents({keyword: this.searchTerm, city: this.searchCity, classificationName: this.searchType}).subscribe((data)=>{
       if (data && data._embedded){
       this.event = data._embedded.events;
         console.log(this.event);

@@ -28,6 +28,9 @@ export class APIService {
     if (searchParameters.city.length > 0){
       requestParameters.city = searchParameters.city
     }
+    if(searchParameters.classificationName.length > 0){
+      requestParameters.classificationName = searchParameters.classificationName
+    }
     return this.client.get<EventResponse>(this.apiURL, {params: requestParameters});
   }
 }
