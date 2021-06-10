@@ -19,4 +19,12 @@ export class EventListComponent implements OnInit {
       console.log(data._embedded);
     }) 
    }
+   keywordSearch(search:any) {
+    this.api.searchEvents({keyword: search.keyword, city: search.city, classificationName: search.classificationName}).subscribe((data)=>{
+      if (data && data._embedded){
+      this.event = data._embedded.events;
+        console.log(this.event);
+      }else{this.event = []}
+     })
+   }
 }

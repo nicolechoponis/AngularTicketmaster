@@ -1,3 +1,4 @@
+<app-search-criteria (search)="keywordSearch($event)"></app-search-criteria>
 <div class="eventArea">
     <div class="eventListings" *ngFor="let events of event; let i = index">
         <p>{{events.name}}</p>
