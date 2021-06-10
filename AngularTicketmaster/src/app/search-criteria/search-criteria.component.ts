@@ -24,7 +24,6 @@ export class SearchCriteriaComponent implements OnInit {
     }) 
    }
     keywordSearch(): void {
-      this.api.getEvents()
       this.api.searchEvents({keyword: this.searchTerm, city: this.searchCity, classificationName: this.searchType}).subscribe((data)=>{
        if (data && data._embedded){
        this.event = data._embedded.events;
