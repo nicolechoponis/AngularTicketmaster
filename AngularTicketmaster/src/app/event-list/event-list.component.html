@@ -1,6 +1,8 @@
 <input [(ngModel)]="searchTerm" placeholder="Search for event"/>
 <input [(ngModel)]="searchCity" placeholder="Search by City"/>
-<button (click)="keywordSearch()">submit</button>
+<input [(ngModel)]="searchType" placeholder="Search by Event Type"/>
+
+<button (click)="keywordSearch()">search</button>
 <!-- <label class="hide">Filter</label> -->
 <div class="eventArea">
     <div class="eventListings" *ngFor="let events of event; let i = index">
