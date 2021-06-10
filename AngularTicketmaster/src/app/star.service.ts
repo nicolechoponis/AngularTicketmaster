@@ -7,7 +7,7 @@ import { EventResponse} from './interface';
 })
 export class StarService {
 
-  isFavorite: boolean;
+  isFavorite!: boolean;
 
   constructor(public client: HttpClient) { }
 

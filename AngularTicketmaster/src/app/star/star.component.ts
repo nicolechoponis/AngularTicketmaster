@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StarService } from '../star.service';
 
 @Component({
   selector: 'app-star',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarComponent implements OnInit {
   
-  constructor() { }
+  constructor(public favorite: StarService) { }
 
   ngOnInit(): void {
   }
