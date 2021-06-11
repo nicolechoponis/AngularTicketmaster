@@ -1,6 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { APIService } from '../api.service';
-import { Event } from '../interface';
 
 @Component({
   selector: 'app-search-criteria',
