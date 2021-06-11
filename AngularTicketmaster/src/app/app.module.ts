@@ -8,6 +8,7 @@ import { StarComponent } from './star/star.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
 import { FormsModule } from '@angular/forms';
+import { EventDetailPageComponent } from './event-detail-page/event-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     SearchCriteriaComponent,
     StarComponent,
     EventListComponent,
-    BucketlistPageComponent
+    BucketlistPageComponent,
+    EventDetailPageComponent
   ],
   imports: [
     BrowserModule,

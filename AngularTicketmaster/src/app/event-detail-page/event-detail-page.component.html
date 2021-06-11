@@ -1,0 +1,10 @@
+<div class="eventDetail">
+    <div class="eventDetailListings" *ngFor="let events of event; let i = index">
+        <p>{{events.name}}</p>
+        <a href={{events.url}}><h1>{{events.name}}</h1></a>
+        <img src={{events.images[7].url}}/>
+        <p>Date: {{events.dates.start.localDate}}</p>
+        <p *ngIf="events.priceRanges">Price Range: ${{events.priceRanges[0].min}} - ${{events.priceRanges[0].max}}</p>
+
+  </div>
+  </div>
