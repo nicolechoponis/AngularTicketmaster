@@ -1,8 +1,11 @@
 <app-search-criteria (search)="keywordSearch($event)"></app-search-criteria>
+
 <div class="eventArea">
     <div class="eventListings" *ngFor="let events of event; let i = index">
         <p>{{events.name}}</p>
-        <a href={{events.url}}><h1>{{events.name}}</h1></a>
+        <a href={{events.url}}><h4>Purchase Tickets</h4></a>
         <img src={{events.images[7].url}}/>
+        <a routerLink='/event-detail/{{events.id}}' >click this for event detail </a>
+        <!-- event-details pass through the id. router link. Set up route, and use id as the path parameter -->
   </div>
   </div>
