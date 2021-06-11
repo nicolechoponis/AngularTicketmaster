@@ -7,7 +7,7 @@ import { EventDetailPageComponent } from './event-detail-page/event-detail-page.
 const routes: Routes = [
   {path: 'event-list', component: EventListComponent}, 
   {path: 'bucketlist', component: BucketlistPageComponent}, 
-  {path: 'event-detail', component: EventDetailPageComponent}, 
+  {path: 'event-detail/:id', component: EventDetailPageComponent}, 
   {path: '', component: EventListComponent, pathMatch:'full'}, 
 
 ];

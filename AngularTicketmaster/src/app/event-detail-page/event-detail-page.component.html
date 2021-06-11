@@ -1,10 +1,11 @@
 <div class="eventDetail">
-    <div class="eventDetailListings" *ngFor="let events of event; let i = index">
-        <p>{{events.name}}</p>
-        <a href={{events.url}}><h1>{{events.name}}</h1></a>
-        <img src={{events.images[7].url}}/>
-        <p>Date: {{events.dates.start.localDate}}</p>
-        <p *ngIf="events.priceRanges">Price Range: ${{events.priceRanges[0].min}} - ${{events.priceRanges[0].max}}</p>
-
+    <div class="eventDetailListings" >
+        <p>{{event.name}}</p>
+        <a href={{event.url}}><h4>Purchase Tickets</h4></a>
+        <img src={{event.images[7].url}}/>
+        <p>Date: {{event.dates.start.localDate}}</p>
+        <p *ngIf="event.priceRanges">Price Range: ${{event.priceRanges[0].min}} - ${{event.priceRanges[0].max}}</p>
+        <p *ngIf="event.seatmap.staticUrl"> <a href="{{event.seatmap.staticUrl}}">View Seating Chart</a></p>
+ 
   </div>
   </div>

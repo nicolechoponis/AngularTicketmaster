@@ -13,6 +13,7 @@ export interface Event {
     priceRanges:PriceRanges[];
     seatmap:Seatmap;
     classifications:Classification[];
+    id:string;
     _embedded: {
         venues:Venue[];
     }

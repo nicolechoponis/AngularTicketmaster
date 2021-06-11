@@ -10,3 +10,9 @@ nav li {
 img.logo {
     height: 50px;
 }
+
+.okayest{
+    font-style: italic;
+    font-size: 15px;
+    color: rgb(255, 123, 0)
+}
