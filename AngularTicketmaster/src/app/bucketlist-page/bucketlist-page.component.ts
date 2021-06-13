@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StarService } from '../star.service';
+import { Event } from '../interface';
 
 @Component({
   selector: 'app-bucketlist-page',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BucketlistPageComponent implements OnInit {
 
-  constructor() { }
+  favoriteList: Event[] = [];
+
+  constructor(private star: StarService) { }
 
   ngOnInit(): void {
+    this.favoriteList=this.star.getFavorites();
   }
 
 }

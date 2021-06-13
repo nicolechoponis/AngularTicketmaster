@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService } from '../api.service';
+import { StarService } from '../star.service';
 import { EventResponse, Event, Genre, Classification, Images, Dates, Start, PriceRanges, Seatmap, Venue } from '../interface';
 
 @Component({
@@ -10,13 +11,16 @@ import { EventResponse, Event, Genre, Classification, Images, Dates, Start, Pric
 export class EventListComponent implements OnInit {
 
   event: Event [] = [];
-  constructor(public api: APIService) { }
+  constructor(public api: APIService, public star: StarService) { }
 
   ngOnInit(): void {
    this.api.getEvents().subscribe((data)=>{
       this.event = data._embedded.events;
       //this.venue = data._embedded.venues;
-      console.log(data._embedded);
+      this.event.forEach(item =>{
+        item.isFavorite = false;
+      } )
+      console.log(this.event);
     }) 
    }
    keywordSearch(search:any) {
@@ -27,4 +31,8 @@ export class EventListComponent implements OnInit {
       }else{this.event = []}
      })
    }
+  toggleFavorite(event: Event){
+    this.star.toggleFavorite(event);
+  }
+
 }
