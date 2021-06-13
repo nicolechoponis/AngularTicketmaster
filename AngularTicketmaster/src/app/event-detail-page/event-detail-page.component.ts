@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { APIService } from '../api.service';
 import { EventResponse, Event, Genre, Classification, Images, Dates, Start, PriceRanges, Seatmap, Venue } from '../interface';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { StarService } from '../star.service';
+
 
 @Component({
   selector: 'app-event-detail-page',
@@ -11,7 +13,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class EventDetailPageComponent implements OnInit {
   id: string ='';
   event: any= {};
-  constructor (public api: APIService, private route: ActivatedRoute,) { }
+  constructor (public api: APIService, private route: ActivatedRoute, public star: StarService) { }
   
   ngOnInit(): void {
   this.route.params.subscribe(params => {
@@ -23,4 +25,8 @@ export class EventDetailPageComponent implements OnInit {
       //different call passing the id to get
     }) 
   });
- }}
+ }
+ toggleFavorite(event: Event){
+  this.star.toggleFavorite(event);
+}
+}

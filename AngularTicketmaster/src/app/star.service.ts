@@ -32,7 +32,6 @@ export class StarService {
     return this.favoriteList;
   }
 
-
   // not sure if this is working
   onClick(){
     this.isFavorite = !this.isFavorite;

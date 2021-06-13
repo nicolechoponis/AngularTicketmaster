@@ -25,3 +25,36 @@ button {
     width: 100%;
     padding: 10px;
 }
+
+
+@media only screen and (min-width: 768px) {
+    .searchArea {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 20px;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .searchFields {
+        width: 800px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    input {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-right: 10px;
+    }
+
+    button {
+        width: 50%;
+    }
+}

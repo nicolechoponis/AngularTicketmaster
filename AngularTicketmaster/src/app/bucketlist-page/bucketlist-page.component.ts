@@ -9,12 +9,19 @@ import { Event } from '../interface';
 })
 export class BucketlistPageComponent implements OnInit {
 
+  event: Event [] = [];
+
   favoriteList: Event[] = [];
 
-  constructor(private star: StarService) { }
+  // changed from private to public kk
+  constructor(public star: StarService) { } 
 
   ngOnInit(): void {
     this.favoriteList=this.star.getFavorites();
+  }
+
+  toggleFavorite(event: Event){
+    this.star.toggleFavorite(event);
   }
 
 }
