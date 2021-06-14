@@ -1,1 +1,12 @@
-<p>bucketlist-page works!</p>
+<div class="eventArea">
+    <div class="eventListings" *ngFor="let event of favoriteList; let i = index">
+        <img src={{event.images[7].url}}/>
+        <div class="eventName">
+            <a routerLink='/event-detail/{{event.id}}'><p>{{event.name}}</p></a>
+            <button class="favoriteItem" (click)="toggleFavorite(event)"><i class="fas fa-star"></i></button>
+        </div>
+        <a href={{event.url}}><h4 class="purchaseTickets">Purchase Tickets</h4></a>
+        <!-- event-details pass through the id. router link. Set up route, and use id as the path parameter -->
+  </div>
+  </div>
+  

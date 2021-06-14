@@ -1,18 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
-* {
+/* * {
     font-family: 'Open Sans', sans-serif;
+} */
+
+/* body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 20px;
+} */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-nav li {
-    list-style-type: none;
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    /* padding: 0; */
+    margin: 20px;
 }
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    z-index: 2;
+}
+
+/* nav li {
+    list-style-type: none;
+} */
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+li {
+    margin: 0px 20px 40px 0px;
+}
+
 
 img.logo {
+    margin: 0px;
     height: 50px;
+    width: auto;
 }
 
 .okayest{
     font-style: italic;
     font-size: 15px;
-    color: rgb(255, 123, 0)
+    color: rgb(255, 123, 0);
+    margin-top: -10px;
+}
+
+.eventArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eventListings {
+    /* margin: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.eventName {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favoriteItem {
+    width: auto;
+}
+
+img{
+    /* width: 100%; */
+    width: 450px;
+    /* min-width: 450px; */
+}
+
+.purchaseTickets {
+    margin-top: -10px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .eventArea {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    .eventListings {
+        padding: 10px;
+    }
+
+    p {
+        max-width: 400px;
+    }
 }

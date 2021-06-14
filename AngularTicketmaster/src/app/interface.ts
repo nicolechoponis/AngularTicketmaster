@@ -17,6 +17,7 @@ export interface Event {
     _embedded: {
         venues:Venue[];
     }
+    isFavorite: boolean;
 }
 export interface Images {
     url:string;

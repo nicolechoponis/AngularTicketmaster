@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StarService } from '../star.service';
+import { Event } from '../interface';
 
 @Component({
   selector: 'app-star',
@@ -8,9 +9,20 @@ import { StarService } from '../star.service';
 })
 export class StarComponent implements OnInit {
   
-  constructor(public favorite: StarService) { }
+  event: Event [] = [];
+
+  // toggle = true;
+  // status = 'Enable'; 
+
+  constructor(public star: StarService) { }
 
   ngOnInit(): void {
+  }
+
+  toggleFavorite(event: Event){
+    this.star.toggleFavorite(event);
+    // this.toggle = !this.toggle;
+    // this.status = this.toggle ? 'Enable' : 'Disable';
   }
 
 }
