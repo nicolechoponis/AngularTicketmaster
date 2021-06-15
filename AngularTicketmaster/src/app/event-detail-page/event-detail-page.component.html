@@ -1,6 +1,6 @@
 <div class="eventDetail">
 <div class="eventDetailItems">
-    <h2>{{event.name}}</h2>
+    <h3>{{event.name}}</h3>
     <p>Date: {{event.dates.start.localDate}}</p>
     <p *ngIf="event.priceRanges">Price Range: ${{event.priceRanges[0].min}} - ${{event.priceRanges[0].max}}</p>
     <button class="favoriteItem" (click)="toggleFavorite(event)"><i class="fas fa-star" [ngClass]="event.isFavorite? 'colorChange' : 'colorSolid'"></i></button>
