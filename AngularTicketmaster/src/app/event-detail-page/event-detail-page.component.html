@@ -1,7 +1,11 @@
 <div class="eventDetail">
     <div class="eventDetailItems">
-        <h2>{{event.name}}</h2>
         <p>Date: {{event.dates.start.localDate}}</p>
+    <div class="eventDetailListings" >
+        <h2 class ="event-name">{{event.name}}</h2>
+        <a href={{event.url}}><h4 class="purchaseTickets">Purchase Tickets</h4></a>
+        <img src={{event.images[7].url}}/>
+        <p class="date">Date: {{event.dates.start.localDate}}</p>
         <p *ngIf="event.priceRanges">Price Range: ${{event.priceRanges[0].min}} - ${{event.priceRanges[0].max}}</p>
         <button class="favoriteItem" (click)="toggleFavorite(event)"><i class="fas fa-star" [ngClass]="event.isFavorite? 'colorChange' : 'colorSolid'"></i></button>
     </div>
