@@ -1,11 +1,22 @@
 <div class="eventDetail">
-    <div class="eventDetailListings" >
-        <p>{{event.name}}</p>
-        <a href={{event.url}}><h4>Purchase Tickets</h4></a>
-        <img src={{event.images[7].url}}/>
-        <p>Date: {{event.dates.start.localDate}}</p>
-        <p *ngIf="event.priceRanges">Price Range: ${{event.priceRanges[0].min}} - ${{event.priceRanges[0].max}}</p>
-        <p *ngIf="event.seatmap.staticUrl"> <a href="{{event.seatmap.staticUrl}}">View Seating Chart</a></p>
-        <button class="favoriteItem" (click)="toggleFavorite(event)"><i class="fas fa-star"></i></button>
+  <div class="eventDetailListings">
+    <p>{{ event.name }}</p>
+    <a href="{{ event.url }}"><h4>Purchase Tickets</h4></a>
+    <img src="{{ event.images[7].url }}" />
+    <p>Date: {{ event.dates.start.localDate }}</p>
+    <p *ngIf="event.priceRanges">
+      Price Range: ${{ event.priceRanges[0].min }} - ${{
+        event.priceRanges[0].max
+      }}
+    </p>
+    <p *ngIf="event.seatmap.staticUrl">
+      <a href="{{ event.seatmap.staticUrl }}">View Seating Chart</a>
+    </p>
+    <button class="favoriteItem" (click)="toggleFavorite(event)">
+      <i
+        class="fas fa-star"
+        [ngClass]="event.isFavorite ? 'colorChange' : 'colorSolid'"
+      ></i>
+    </button>
   </div>
-  </div>
+</div>
