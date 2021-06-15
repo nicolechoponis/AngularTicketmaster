@@ -1,10 +1,15 @@
 .eventDetail {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 50px;
 }
 
 img {
     width: 450px;
+}
+
+h2 {
+    color: #396CB4;
 }
 
 button {
@@ -18,15 +23,11 @@ button {
     margin-top: 30px;
 }
 
-a{
-    text-decoration: none;
-}
-
 .favoriteItem {
     width: auto;
     border: none;
     background-color: transparent;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -43,11 +44,11 @@ a{
     }
 
     .seatImage {
-        width: 80vw; 
+        width: 60vw; 
     }
 
     img {
-        width: 50vw;
+        width: 40vw;
     }
 
     .seatTitle {

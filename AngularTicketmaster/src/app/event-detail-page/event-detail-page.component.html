@@ -1,3 +1,4 @@
+<div class="eventDetail">
 <div class="eventDetailItems">
     <h2>{{event.name}}</h2>
     <p>Date: {{event.dates.start.localDate}}</p>
@@ -5,6 +6,7 @@
     <button class="favoriteItem" (click)="toggleFavorite(event)"><i class="fas fa-star" [ngClass]="event.isFavorite? 'colorChange' : 'colorSolid'"></i></button>
 </div>
     <img src={{event.images[7].url}}/>
+    </div>
 <h2 class="seatTitle">Seating Chart</h2>
 <div class="seatChart">
     <img class="seatImage" src={{event.seatmap.staticUrl}}>
