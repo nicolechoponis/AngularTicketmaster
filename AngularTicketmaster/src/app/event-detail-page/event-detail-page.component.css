@@ -1,7 +1,19 @@
+body{
+    margin: 20px;
+}
+.navImage{
+    visibility: hidden;
+}
+
 .eventDetail {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 50px;
+    justify-content: center;
+    align-content: center;
+    margin: 50px 20px 0px 20px;
+}
+.eventDetailItems{
+    margin-top: 20px;
 }
 
 img {
@@ -9,17 +21,16 @@ img {
 }
 
 h2 {
-    color: #396CB4;
+    color: #000000;
 }
 
 button {
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .purchase {
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 30px;
 }
 
@@ -28,6 +39,11 @@ button {
     border: none;
     background-color: transparent;
     font-size: 25px;
+    margin-bottom: -20px;
+}
+
+.navImage{
+    height: 50%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -35,6 +51,7 @@ button {
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
+        margin-top: 100px;
     }
     
     .seatChart {
@@ -47,16 +64,23 @@ button {
         width: 60vw; 
     }
 
-    img {
-        width: 40vw;
+    .eventImage {
+        max-height: 300px;
+        width: 100%;
+        position: -webkit-sticky; 
+        position: sticky;
+        top: 190px;
+        margin-left: 20px;
     }
 
     .seatTitle {
-        text-align: center;
+        /* text-align: center; */
         margin-top: 50px;
     }
 
     .eventDetailItems {
         margin-left: 20px;
     }
+
+
 }
