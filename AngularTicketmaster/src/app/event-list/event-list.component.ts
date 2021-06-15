@@ -16,9 +16,17 @@ export class EventListComponent implements OnInit {
   ngOnInit(): void {
    this.api.getEvents().subscribe((data)=>{
       this.event = data._embedded.events;
+      let favorites = this.star.getFavorites();
       //this.venue = data._embedded.venues;
+      favorites.forEach(event =>{
       this.event.forEach(item =>{
-        item.isFavorite = false;
+          if (event.isFavorite == true){
+            item.isFavorite = true;
+          }else {
+            item.isFavorite = false;
+          }
+        })
+        // item.isFavorite = false;
       } )
       console.log(this.event);
     }) 

@@ -96,6 +96,14 @@ img{
     margin-top: -10px;
 }
 
+.colorSolid {
+    color: black;
+}
+
+.colorChange {
+    color: red;
+}
+
 
 @media only screen and (min-width: 768px) {
     nav {

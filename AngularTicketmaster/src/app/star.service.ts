@@ -1,16 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { EventResponse, Event } from './interface';
+import { isNgTemplate } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StarService {
 
+  id: string ='';
+
   isFavorite!: boolean;
   favoriteList: Event[] = [];
 
   constructor(public client: HttpClient) { }
+
+//   foundFavorite(event: Event){
+//   if (event.isFavorite = true){
+//     button.addClass()
+//   }else {
+    
+//   }
+// }
+
 
 
   toggleFavorite(event: Event){
