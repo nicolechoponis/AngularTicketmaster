@@ -1,0 +1,61 @@
+.eventDetail {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+img {
+    width: 450px;
+}
+
+button {
+    padding: 10px;
+}
+
+.purchase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.favoriteItem {
+    width: auto;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    .eventDetail {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    
+    .seatChart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seatImage {
+        width: 80vw; 
+    }
+
+    img {
+        width: 50vw;
+    }
+
+    .seatTitle {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .eventDetailItems {
+        margin-left: 20px;
+    }
+}
