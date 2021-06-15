@@ -1,8 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-/* * {
-    font-family: 'Open Sans', sans-serif;
-} */
-
 *,
 *:before,
 *:after {
@@ -12,14 +8,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: white;
-    /* padding: 0; */
     margin: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(66, 65, 65);
-
 }
 
 nav {
@@ -29,9 +18,6 @@ nav {
     z-index: 2;
 }
 
-/* nav li {
-    list-style-type: none;
-} */
 ul {
     list-style-type: none;
     padding: 0px;
@@ -66,7 +52,6 @@ img.logo {
 }
 
 .eventListings {
-    /* margin: 20px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,16 +78,24 @@ img.logo {
 }
 
 .colorSolid {
-    color: black;
+    color: rgb(66, 65, 65);;
 }
 
 .colorChange {
     color: #396CB4;
 }
 
+i.fas.fa-star.colorSolid, i.fas.fa-star.colorChange {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
-    color: rgb(66, 65, 65);
+    color: #396CB4;
+}
+
+a:hover {
+    color: rgb(255, 123, 0); 
 }
 
 p, h3, h4 {
@@ -117,8 +110,8 @@ button {
     border-radius: 5px;
     font-size: 14px;
     font-weight: bolder;
+    cursor: pointer;
 }
-
 
 @media only screen and (min-width: 768px) {
     nav {
@@ -132,7 +125,7 @@ button {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: flex-end;
+        align-items: baseline;
     }
 
     .eventListings {
