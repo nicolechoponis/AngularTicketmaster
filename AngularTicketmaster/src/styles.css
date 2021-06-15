@@ -84,12 +84,9 @@ img.logo {
 
 .favoriteItem {
     width: auto;
-}
-
-img{
-    /* width: 100%; */
-    width: 450px;
-    /* min-width: 450px; */
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
 }
 
 .purchaseTickets {
@@ -101,7 +98,26 @@ img{
 }
 
 .colorChange {
-    color: red;
+    color: #396CB4;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(66, 65, 65);
+}
+
+p, h3, h4 {
+    max-width: 400px;
+}
+
+button {
+    padding: 12px;
+    background-color: #396CB4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bolder;
 }
 
 
@@ -122,9 +138,5 @@ img{
 
     .eventListings {
         padding: 10px;
-    }
-
-    p {
-        max-width: 400px;
     }
 }
