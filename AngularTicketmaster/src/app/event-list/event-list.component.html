@@ -3,7 +3,10 @@
     <div class="eventListings" *ngFor="let events of event; let i = index;">
         <img src={{events.images[7].url}}/>
         <div class="eventName">
+            <div class="eventDetails">
             <a routerLink='/event-detail/{{events.id}}'><h3>{{events.name}}</h3></a>
+            <p class="date">Date: {{events.dates.start.localDate}}</p>
+            </div>
             <button class="favoriteItem" (click)="toggleFavorite(events)"><i class="fas fa-star" [ngClass]="events.isFavorite? 'colorChange' : 'colorSolid'"></i></button>
         </div>
         <a href={{events.url}}><button>Purchase Tickets</button></a>
