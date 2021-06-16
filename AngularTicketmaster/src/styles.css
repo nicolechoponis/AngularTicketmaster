@@ -33,10 +33,15 @@ li {
     margin: 0px 20px 40px 0px;
 }
 
+ul {
+    margin-left: 20px;
+}
+
 img.logo {
-    /* margin: 0px; */
+    margin-top: 5px;
     height: 50px;
     width: auto;
+    margin-left: 20px;
 }
 
 .okayest{
@@ -44,6 +49,7 @@ img.logo {
     font-size: 15px;
     color: rgb(255, 123, 0);
     margin-top: -10px;
+    margin-left: 20px;
 }
 
 .eventArea {
@@ -164,13 +170,6 @@ button {
         padding: 10px;
     }
 
-    img.logo {
-        margin-left: 20px;
-        margin-top: 5px;
-    }
-    .okayest {
-        margin-left: 20px;
-    }
     ul {
         margin-top: 20px;
     }
