@@ -16,8 +16,13 @@ body{
     margin-top: 20px;
 }
 
-img {
-    width: 450px;
+.eventImage {
+    width: 375px;
+    max-height: 250px;
+}
+
+.seatImage {
+    width: 90vw; 
 }
 
 h2 {
