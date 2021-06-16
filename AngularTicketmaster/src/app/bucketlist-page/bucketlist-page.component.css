@@ -1,6 +1,6 @@
 img{
-    width: 450px;
-    max-height: 250px;
+    width: 350px;
+    max-height: 225px;
 }
 
 .eventListings {
@@ -9,4 +9,12 @@ img{
 
 .eventArea {
     margin-top: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    img{
+        width: 450px;
+        max-height: 250px;
+    }
+    
 }
